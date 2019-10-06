@@ -7,15 +7,22 @@ public class Contact {
 	private String address;
 	private String phone;
 
-	protected Contact(Integer id, String name, String email, String address, String phine) {
-		super();
+	protected Contact(Integer id, String name, String email, String address, String phone) {
+		this(name,email, address, phone);
 		this.id = id;
+		
+		
+	}
+
+	protected Contact(String name, String email, String address, String phine) {
+
 		this.name = name;
 		this.email = email;
 		this.address = address;
-		this.phone = phine;
+		this.phone = phone;
 	}
 
+	
 	public Integer getId() {
 		return id;
 	}
@@ -52,8 +59,8 @@ public class Contact {
 		return phone;
 	}
 
-	public void setPhone(String phine) {
-		this.phone = phine;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 
 }
