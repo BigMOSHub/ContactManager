@@ -1,7 +1,7 @@
 package net.codejava.contact.model;
 
 public class Contact {
-	private Integer id;
+	private int	id;
 	private String name;
 	private String email;
 	private String address;
@@ -10,10 +10,15 @@ public class Contact {
 	public Contact(Integer id, String name, String email, String address, String phone) {
 		this(name,email, address, phone);
 		this.id = id;
-		
+	
 		
 	}
 
+//	public Contact() {
+//		
+//	}
+	
+	
 	public Contact(String name, String email, String address, String phone) {
 
 		this.name = name;

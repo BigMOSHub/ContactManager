@@ -13,12 +13,12 @@ class ContactDAOTest {
 	@Test
 	void testSave() {
 		dataSource = new DriverManagerDataSource();
-		dataSource.setDriverClassName("com.mysqljdbc.Driver");
+		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 		dataSource.setUrl("jdbc:mysql://localhost:3306/contactdb");
 		dataSource.setUsername("root");
 		dataSource.setPassword("root");
 		dao = new ContactDAOImpl(dataSource);
-		Contact contact = new Contact("Miguel Olivas","molivass@gmail.com", "xxxx","9999");
+		Contact contact = new Contact("Steve Jobs","Stevejobs@gmail.com", "xxxx","9999");
 		int result = dao.save(contact);
 		assertTrue(result>0);
 		
