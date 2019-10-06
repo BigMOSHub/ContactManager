@@ -2,9 +2,12 @@ package net.codejava.contact.dao;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.List;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
 
 import net.codejava.contact.model.Contact;
 
@@ -51,12 +54,18 @@ class ContactDAOTest {
 
 	@Test
 	void testDelete() {
-		fail("Not yet implemented");
+		Integer id=3	;
+		int result = dao.delete(id);
+		assertTrue(result>0);	
 	}
 
 	@Test
 	void testList() {
-		fail("Not yet implemented");
+	List<Contact> listContacts = dao.list();
+	for (Contact aContact : listContacts) {
+		System.out.println(aContact);
+	}
+	assertTrue(!listContacts.isEmpty());
 	}
 
 }
