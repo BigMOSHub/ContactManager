@@ -1,7 +1,7 @@
 package net.codejava.contact.model;
 
 public class Contact {
-	private int	id;
+	private Integer	id;
 	private String name;
 	private String email;
 	private String address;
@@ -11,13 +11,9 @@ public class Contact {
 		this(name,email, address, phone);
 		this.id = id;
 	
-		
+		//getters and setters
 	}
 
-//	public Contact() {
-//		
-//	}
-	
 	
 	public Contact(String name, String email, String address, String phone) {
 
