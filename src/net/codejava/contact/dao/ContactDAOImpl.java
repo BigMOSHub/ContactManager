@@ -19,7 +19,7 @@ public class ContactDAOImpl implements ContactDAO {
 	@Override
 	public int save(Contact c) {
 		// TODO Auto-generated method stub
-		String sql = "INSERT INTO Contact (name, email, address, phone) VALUES (?,?,?,?)";
+		String sql = "INSERT INTO contact (name, email, address, phone) VALUES (?,?,?,?)";
 		return jdbcTemplate.update(sql,c.getName(),c.getEmail(), c.getAddress(),c.getPhone());
 	}
 
