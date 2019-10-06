@@ -18,9 +18,10 @@ class ContactDAOTest {
 		dataSource.setUsername("root");
 		dataSource.setPassword("root");
 		dao = new ContactDAOImpl(dataSource);
-		Contact contact = new Contact();
+		Contact contact = new Contact("Miguel Olivas","molivass@gmail.com", "xxxx","9999");
+		int result = dao.save(contact);
+		assertTrue(result>0);
 		
-		fail("Not yet implemented");
 	}
 
 	@Test

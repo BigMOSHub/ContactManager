@@ -7,14 +7,14 @@ public class Contact {
 	private String address;
 	private String phone;
 
-	protected Contact(Integer id, String name, String email, String address, String phone) {
+	public Contact(Integer id, String name, String email, String address, String phone) {
 		this(name,email, address, phone);
 		this.id = id;
 		
 		
 	}
 
-	protected Contact(String name, String email, String address, String phine) {
+	public Contact(String name, String email, String address, String phone) {
 
 		this.name = name;
 		this.email = email;
