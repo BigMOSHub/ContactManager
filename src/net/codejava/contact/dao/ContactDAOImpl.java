@@ -45,12 +45,22 @@ public class ContactDAOImpl implements ContactDAO {
 			@Override
 			public Contact extractData(ResultSet rs) throws SQLException, DataAccessException {
 				// TODO Auto-generated method stub
+				if (rs.next()) {
+					String name = rs.getString("name");
+					String email = rs.getString("email");
+					String address = rs.getString("address");
+					String phone = rs.getString("phone");
+					return new Contact(id,name,email,address,phone);
+					
+				}
+				
 				return null;
 			}
 			
-		}
+		};
 
-		return null;
+		return jdbcTemplate.query(sql,extractor);
+
 	}
 
 	@Override
