@@ -1,10 +1,14 @@
 package net.codejava.contact.dao;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
 import javax.sql.DataSource;
 
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.ResultSetExtractor;
 
 import net.codejava.contact.model.Contact;
 
@@ -34,6 +38,18 @@ public class ContactDAOImpl implements ContactDAO {
 	@Override
 	public Contact get(Integer id) {
 		// TODO Auto-generated method stub
+		String sql = "SELECT * FROM contact WHERE contact_id="+ id;
+		
+		ResultSetExtractor<Contact> extractor = new ResultSetExtractor<Contact>() {
+
+			@Override
+			public Contact extractData(ResultSet rs) throws SQLException, DataAccessException {
+				// TODO Auto-generated method stub
+				return null;
+			}
+			
+		}
+
 		return null;
 	}
 
