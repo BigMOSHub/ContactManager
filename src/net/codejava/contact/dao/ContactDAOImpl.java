@@ -89,7 +89,7 @@ public class ContactDAOImpl implements ContactDAO {
 			
 		};
 		return jdbcTemplate.query(sql,rowMapper);
-		
+			
 	}
 
 }
