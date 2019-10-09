@@ -12,6 +12,8 @@ public class Contact {
 		this.id = id;
 	
 		//getters and setters
+		
+		System.out.println("Contact linea 16");
 	}
 
 	
@@ -64,11 +66,15 @@ public class Contact {
 		this.phone = phone;
 	}
 
-
+	
 	@Override
 	public String toString() {
+		System.out.println("Contact linea 74");
+		
 		return "Contact [id=" + id + ", name=" + name + ", email=" + email + ", address=" + address + ", phone=" + phone
 				+ "]";
+		
 	}
-
+	
 }
+

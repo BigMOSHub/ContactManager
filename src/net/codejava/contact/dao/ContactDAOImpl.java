@@ -19,6 +19,8 @@ public class ContactDAOImpl implements ContactDAO {
 	
 	public ContactDAOImpl(DataSource datasource) {
 		this.jdbcTemplate = new JdbcTemplate(datasource);
+		
+		System.out.println("DAOImpl linea 23");
 	}
 	
 	@Override
@@ -73,7 +75,8 @@ public class ContactDAOImpl implements ContactDAO {
 
 	@Override
 	public List<Contact> list() {
-
+		System.out.println("DAOImpl linea 78");
+		
 		String sql = "SELECT * FROM contact";
 		RowMapper<Contact> rowMapper = new RowMapper<Contact>() {
 

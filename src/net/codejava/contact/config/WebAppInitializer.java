@@ -1,4 +1,4 @@
-	package net.codejava.contact.config;
+package net.codejava.contact.config;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -13,12 +13,15 @@ public class WebAppInitializer implements WebApplicationInitializer {
 	@Override
 	public void onStartup(ServletContext servletContext) throws ServletException {
 		// TODO Auto-generated method stub
+		System.out.println("WebAppinitializer linea 16");
 		AnnotationConfigWebApplicationContext appContext = new AnnotationConfigWebApplicationContext(); 
 		appContext.register(SpringMvcConfig.class);
 		ServletRegistration.Dynamic dispatcher = 
 				servletContext.addServlet("SpringDispatcher", new DispatcherServlet(appContext));
 		dispatcher.setLoadOnStartup(1);
 		dispatcher.addMapping("/");
+		System.out.println("WebAppinitializer linea 23");
+
 	}
 
 }

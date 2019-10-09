@@ -30,9 +30,13 @@ public class SpringMvcConfig implements WebMvcConfigurer {
 	}
 	@Bean
 	public ViewResolver getViewResolver() {
+		System.out.println("MVC linea 33");
+		
 		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
 		resolver.setPrefix("/WEB-INF/views/");
 		resolver.setSuffix(".jsp");
+		System.out.println("MVC linea 38");
+		
 		return resolver;
 	}
 	
