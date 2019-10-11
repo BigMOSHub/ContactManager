@@ -14,20 +14,20 @@ import net.codejava.contact.model.Contact;
 public class MainController {
 	
 		
-//	@Autowired
-//	private ContactDAO contactDAO;
+	@Autowired
+	private ContactDAO contactDAO;
 	 
 	@RequestMapping(value = "/") 
-	public String home() {
-		System.out.println("Controller unico linea 22");
-		return "index";
-	}
-	
-	//	public ModelAndView listContact(ModelAndView model) { 
-//		List<Contact> listContact = contactDAO.list();
-//		model.addObject("listContact",listContact);
-//		model.setViewName("index");
-//		
-//		return model;
+//	public String home() {
+//		System.out.println("MainController unico linea 22");
+//		return "index";
 //	}
+	
+		public ModelAndView listContact(ModelAndView model) { 
+		List<Contact> listContact = contactDAO.list();
+		model.addObject("listContact",listContact);
+		model.setViewName("index");
+		
+		return model;
+	}
 }
