@@ -16,7 +16,7 @@ import net.codejava.contact.dao.ContactDAOImpl;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "net.code.java.contact")
+@ComponentScan(basePackages = "net.codejava.contact")
 public class SpringMvcConfig implements WebMvcConfigurer {
 
 	@Bean

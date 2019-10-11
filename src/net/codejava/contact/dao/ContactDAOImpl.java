@@ -20,7 +20,7 @@ public class ContactDAOImpl implements ContactDAO {
 	public ContactDAOImpl(DataSource datasource) {
 		this.jdbcTemplate = new JdbcTemplate(datasource);
 		
-		System.out.println("DAOImpl linea 23");
+		System.out.println("DAOImpl linea 24");
 	}
 	
 	@Override
