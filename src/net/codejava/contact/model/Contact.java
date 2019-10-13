@@ -17,7 +17,7 @@ public class Contact {
 	
 		//getters and setters
 		
-		System.out.println("Contact linea 16");
+		System.out.println("ContactModel linea 20 - inicio -this.id getters and setters-");
 	}
 
 	

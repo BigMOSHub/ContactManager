@@ -20,13 +20,14 @@ public class ContactDAOImpl implements ContactDAO {
 	public ContactDAOImpl(DataSource datasource) {
 		this.jdbcTemplate = new JdbcTemplate(datasource);
 		
-		System.out.println("DAOImpl linea 24");
+		System.out.println("ContactDAOImpl linea 23 - this.jdbcTemplate");
 	}
 	
 	@Override
 	public int save(Contact c) {
 		// TODO Auto-generated method stub
 		String sql = "INSERT INTO contact (name, email, address, phone) VALUES (?,?,?,?)";
+		System.out.println("ContactDAOImpl linea 30 - save");
 		return jdbcTemplate.update(sql,c.getName(),c.getEmail(), c.getAddress(),c.getPhone());
 	}
 
@@ -34,6 +35,7 @@ public class ContactDAOImpl implements ContactDAO {
 	public int update(Contact c) {
 		// TODO Auto-generated method stub
 		String sql = "UPDATE contact SET name=?, email=?,address=?,phone=? WHERE contact_id=?";
+		System.out.println("ContactDAOImpl linea 38 - updatesave");
 		return jdbcTemplate.update(sql,c.getName(),c.getEmail(), c.getAddress(),c.getPhone(),c.getId());
 
 	}
@@ -42,7 +44,7 @@ public class ContactDAOImpl implements ContactDAO {
 	public Contact get(Integer id) {
 		// TODO Auto-generated method stub
 		String sql = "SELECT * FROM contact WHERE contact_id="+ id;
-		
+		System.out.println("ContactDAOImpl linea 47 - inicio - get");
 		ResultSetExtractor<Contact> extractor = new ResultSetExtractor<Contact>() {
 
 			@Override
@@ -61,7 +63,7 @@ public class ContactDAOImpl implements ContactDAO {
 			}
 			
 		};
-
+		System.out.println("ContactDAOImpl linea 66 - inicio - get");
 		return jdbcTemplate.query(sql,extractor);
 
 	}
@@ -69,13 +71,14 @@ public class ContactDAOImpl implements ContactDAO {
 	@Override
 	public int delete(Integer id) {
 		String sql = "DELETE FROM contact WHERE contact_id="+ id;
+		System.out.println("ContactDAOImpl linea 74 - delete");
 		return jdbcTemplate.update(sql);
 		
 	}
 
 	@Override
 	public List<Contact> list() {
-		System.out.println("DAOImpl linea 78");
+		System.out.println("ContactDAOImpl linea 81 - inicio List");
 		
 		String sql = "SELECT * FROM contact";
 		RowMapper<Contact> rowMapper = new RowMapper<Contact>() {
@@ -91,6 +94,7 @@ public class ContactDAOImpl implements ContactDAO {
 			}
 			
 		};
+		System.out.println("ContactDAOImpl linea 97 - fin List");
 		return jdbcTemplate.query(sql,rowMapper);
 			
 	}

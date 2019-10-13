@@ -21,27 +21,31 @@ public class SpringMvcConfig implements WebMvcConfigurer {
 
 	@Bean
 	public DataSource getDataSource() {
+		System.out.println("SrpingMVC linea 24 inicio - getDataSource");
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 		dataSource.setUrl("jdbc:mysql://localhost:3306/contactdb");
 		dataSource.setUsername("root");
 		dataSource.setPassword("root");
+		System.out.println("SpringMVC linea 31 fin - getDataSource");
+
 		return dataSource;
 	}
 	@Bean
 	public ViewResolver getViewResolver() {
-		System.out.println("MVC linea 33");
+		System.out.println("SpringMVC linea 33 inicio - getViewResolver");
 		
 		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
 		resolver.setPrefix("/WEB-INF/views/");
 		resolver.setSuffix(".jsp");
-		System.out.println("MVC linea 38");
+		System.out.println("SpringMVC linea 38 fin - getViewResolver");
 		
 		return resolver;
 	}
 	
 	@Bean
 	public ContactDAO getContactDAO() {
+		System.out.println("SpringMVC linea unica 48 - getContactDAO");
 		return new ContactDAOImpl(getDataSource());
 	}
 	

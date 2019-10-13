@@ -13,14 +13,14 @@ public class WebAppInitializer implements WebApplicationInitializer {
 	@Override
 	public void onStartup(ServletContext servletContext) throws ServletException {
 		// TODO Auto-generated method stub
-		System.out.println("WebAppinitializer linea 16");
+		System.out.println("WebAppinitializer linea 16 - inicio - onStartup Servlet");
 		AnnotationConfigWebApplicationContext appContext = new AnnotationConfigWebApplicationContext(); 
 		appContext.register(SpringMvcConfig.class);
 		ServletRegistration.Dynamic dispatcher = 
 				servletContext.addServlet("SpringDispatcher", new DispatcherServlet(appContext));
 		dispatcher.setLoadOnStartup(1);
 		dispatcher.addMapping("/");
-		System.out.println("WebAppinitializer linea 23");
+		System.out.println("WebAppinitializer linea 23 - fin - onStartup Servlet");
 
 	}
 

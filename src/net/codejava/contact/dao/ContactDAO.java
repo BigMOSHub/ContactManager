@@ -4,7 +4,10 @@ import java.util.List;
 
 import net.codejava.contact.model.Contact;
 
+
 public interface ContactDAO {
+
+	
 	public int save(Contact contact);
 	
 	public int update(Contact contact);
@@ -16,3 +19,4 @@ public interface ContactDAO {
 	public List<Contact> list();
 	
 }
+
