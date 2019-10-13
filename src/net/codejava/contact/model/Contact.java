@@ -12,42 +12,51 @@ public class Contact {
 //	}
 
 	public Contact(Integer id, String name, String email, String address, String phone) {
-		this(name,email, address, phone);
+//		this(name,email, address, phone);
+		System.out.println("ContactModel Contact - linea 16 -this.id y otros -getters and setters-");
 		this.id = id;
-	
+		this.name = name;
+		this.email = email;
+		this.address = address;
+		this.phone = phone;	
 		//getters and setters
-		
-		System.out.println("ContactModel linea 20 - inicio -this.id getters and setters-");
+		System.out.println("ContactModel Contact - linea 23 -this.id y otros -getters and setters-");
 	}
 
 	
 	public Contact(String name, String email, String address, String phone) {
-
+		System.out.println("ContactModel Contact - linea 25 inicio -this.los otros campos- getters and setters-");
 		this.name = name;
 		this.email = email;
 		this.address = address;
 		this.phone = phone;
+		System.out.println("ContactModel Contact - linea 30 fin -this.los otros campos- getters and setters-");
 	}
 
 	
 	public Contact() {
 		// TODO Auto-generated constructor stub
+		System.out.println("ContactModel Contact - linea 36 -Constructor-");
 	}
 
 
 	public Integer getId() {
+		System.out.println("ContactModel getId - linea 41-return id");
 		return id;
 	}
 
 	public void setId(Integer id) {
+		System.out.println("ContactModel setId - linea 46-this.id");
 		this.id = id;
 	}
 
 	public String getName() {
+		System.out.println("ContactModel getName - linea 51-return name");
 		return name;
 	}
 
 	public void setName(String name) {
+		System.out.println("ContactModel setName - linea 56-this.name");
 		this.name = name;
 	}
 
