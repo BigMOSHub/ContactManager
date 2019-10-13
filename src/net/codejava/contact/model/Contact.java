@@ -33,13 +33,13 @@ public class Contact {
 	
 	public Contact() {
 		// TODO Auto-generated constructor stub
-		System.out.println("ContactModel Contact - linea 36 -Constructor-");
+		System.out.println("ContactModel Contact - linea unica 36 -Constructor-");
 	}
 
 
 	public Integer getId() {
 		System.out.println("ContactModel getId - linea 41-return id");
-		return id;
+		return 	id;
 	}
 
 	public void setId(Integer id) {
