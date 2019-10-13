@@ -12,16 +12,17 @@
 	<div align="center">
 		<h1>Contact List</h1>
 		<h3><a href="new" >New Contact</a></h3>
-		<table border ="1" >
+		<table border ="1" cellpadding="5">
 			<tr>
 				<th>No</th>
 				<th>Name</th>
-				<th>email</th>
-				<th>address</th>
-				<th>phone</th>
+				<th>Email</th>
+				<th>Address</th>
+				<th>Phone</th>
+				<th>Action</th>
 			</tr>
 			
-			<c:forEach items="$(listContact)" var="contact" varStatus="status">
+			<c:forEach items="${listContact}" var="contact" varStatus="status">
 			<tr>
 				<td>${status.index + 1}</td>
 				<td>${contact.name}</td>
@@ -32,8 +33,6 @@
 			</c:forEach>
 			
 		</table>
-	
 	</div>
-
 </body>
 </html>
