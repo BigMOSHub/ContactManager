@@ -41,7 +41,7 @@ public class ContactDAOImpl implements ContactDAO {
 	}
 
 	@Override
-	public Contact get(Integer id) {
+	public Contact get(final Integer id) {
 		// TODO Auto-generated method stub
 		String sql = "SELECT * FROM contact WHERE contact_id="+ id;
 		System.out.println("ContactDAOImpl linea 47 - inicio - get");
