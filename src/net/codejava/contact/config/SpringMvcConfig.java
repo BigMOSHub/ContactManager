@@ -19,18 +19,34 @@ import net.codejava.contact.dao.ContactDAOImpl;
 @ComponentScan(basePackages = "net.codejava.contact")
 public class SpringMvcConfig implements WebMvcConfigurer {
 
+//	@Bean
+//	public DataSource getDataSource() {
+//		System.out.println("SrpingMVC linea 24 inicio - getDataSource");
+//		DriverManagerDataSource dataSource = new DriverManagerDataSource();
+//		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+//		dataSource.setUrl("jdbc:mysql://localhost:3306/contactdb");
+//		dataSource.setUsername("root");
+//		dataSource.setPassword("root");
+//		System.out.println("SpringMVC linea 31 fin - getDataSource");
+//
+//		return dataSource;
+//	}
+
 	@Bean
 	public DataSource getDataSource() {
 		System.out.println("SrpingMVC linea 24 inicio - getDataSource");
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource.setUrl("jdbc:mysql://localhost:3306/contactdb");
-		dataSource.setUsername("root");
-		dataSource.setPassword("root");
+		dataSource.setUrl("jdbc:mysql://mosserverazure.mysql.database.azure.com:3306/contactdb");
+		dataSource.setUsername("myadmin@mosserverazure");
+		dataSource.setPassword("8gxdGt59HQPpmf@");
 		System.out.println("SpringMVC linea 31 fin - getDataSource");
 
 		return dataSource;
 	}
+
+	
+	
 	@Bean
 	public ViewResolver getViewResolver() {
 		System.out.println("SpringMVC linea 33 inicio - getViewResolver");
