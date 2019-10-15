@@ -1,8 +1,0 @@
-net/codejava/contact/config/SpringMvcConfig.class
-net/codejava/contact/controller/MainController.class
-net/codejava/contact/model/Contact.class
-net/codejava/contact/dao/ContactDAOImpl$1.class
-net/codejava/contact/dao/ContactDAOImpl$2.class
-net/codejava/contact/dao/ContactDAOImpl.class
-net/codejava/contact/dao/ContactDAO.class
-net/codejava/contact/config/WebAppInitializer.class
