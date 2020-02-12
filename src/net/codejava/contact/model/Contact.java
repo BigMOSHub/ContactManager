@@ -8,15 +8,14 @@ public class Contact {
 	private String phone;
 	
 	public Contact(Integer id, String name, String email, String address, String phone) {
-		//getters and setters
 		this(name,email, address, phone);
-		System.out.println("ContactModel Contact - linea 13 - inicio - -this.otros y id -getters and setters-");
+		System.out.println("ContactModel Contact - linea 13 - inicio - -this.otros y id -constructor-");
 		this.id = id;
 //		this.name = name;
 //		this.email = email;
 //		this.address = address;
 //		this.phone = phone;	
-		System.out.println("ContactModel Contact - linea 19 - fin- -this.otros y id -getters and setters-");
+		System.out.println("ContactModel Contact - linea 19 - fin- -this.otros y id -constructor-");
 	}
 
 	
@@ -90,7 +89,7 @@ public class Contact {
 	
 	@Override
 	public String toString() {
-		System.out.println("ContactModel - toString - linea 74");
+		System.out.println("ContactModel - toString - linea 92");
 		return "Contact [id=" + id + ", name=" + name + ", email=" + email + ", address=" + address + ", phone=" + phone
 				+ "]";
 		
